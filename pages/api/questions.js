@@ -1,9 +1,5 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-/*
-const{ useState, useEffect } = require('react');
-const axios = require('axios');
-*/
 
 const quizQuestions = [
   {
@@ -28,7 +24,7 @@ const quizQuestions = [
 
 export default sendQuizQuestions = async () => {
   try {
-    const response = await axios.post('/api/quiz', { quizQuestions });
+    const response = await axios.post('/api/quiz', { quizQuestions })
     if (response.data.success) {
       console.log('Quiz questions sent successfully');
     }
@@ -36,8 +32,6 @@ export default sendQuizQuestions = async () => {
     console.error('Error sending quiz questions:', error);
   }
   useEffect(() => {
-    sendQuizQuestions();
-  }, []);
+  sendQuizQuestions();
+}, []);
 };
-
-

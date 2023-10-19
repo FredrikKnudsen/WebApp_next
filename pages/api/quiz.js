@@ -20,7 +20,7 @@ const questions = [
 ]
 
 
-export default async (req, res) => {
+export default function handler(req, res) {
   if (req.method === 'POST') {
     const data = req.body
     questions.push(data)

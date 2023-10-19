@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Link from 'next/link';
 
 const TakeQuiz = () => {
   const [quiz, setQuiz] = useState(null);
@@ -49,6 +50,9 @@ const TakeQuiz = () => {
 
   return (
     <div>
+      <Link href="/">
+        <button>Home</button>
+      </Link>
       <h1>Basketball Quiz</h1>
       {quiz ? (
         quiz.questions.map((question) => (
