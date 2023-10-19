@@ -45,6 +45,7 @@ const TakeQuiz = () => {
     setUserScore(score);
     setShowResults(true);
   };
+  
 
   return (
     <div>

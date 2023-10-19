@@ -1,4 +1,7 @@
-import Link from 'next/link'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import Link from 'next/link';
+
 
 const Navigation = () => {
   return (
@@ -17,4 +20,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation
+export default Navigation;
