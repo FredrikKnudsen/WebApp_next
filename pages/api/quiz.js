@@ -14,7 +14,7 @@ const questions = [
   {
     id: 3,
     question: 'Which player holds the record for the most points scored in a single NBA game?',
-    options: ['Wilt Chamberlain', 'Michael Jordan', 'Kareem Abdul-Jabbar', 'Larry Bird'],
+    options: ['Larry Bird', 'Michael Jordan', 'Kareem Abdul-Jabbar', 'Wilt Chamberlain'],
     correctAnswer: 'Wilt Chamberlain',
   },
 ]

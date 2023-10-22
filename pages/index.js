@@ -7,6 +7,10 @@ const Home = () => {
       <Link href="/take-quiz">
         <button>Take a Quiz Page</button>
       </Link>
+      <p></p>
+      <Link href="/submit-quiz">
+        <button>Submit a Quiz Question</button>
+      </Link>
     </div>
   );
 };

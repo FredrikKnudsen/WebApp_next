@@ -28,7 +28,7 @@ const TakeQuiz = () => {
     getQuiz();
   }, []);
 
-  const handleAnswerSubmission = (questionId, selectedOption) => {
+  const handleUserAnswer = (questionId, selectedOption) => {
     setUserAnswers({
       ...userAnswers,
       [questionId]: selectedOption,
@@ -53,6 +53,10 @@ const TakeQuiz = () => {
       <Link href="/">
         <button>Home</button>
       </Link>
+      <p></p>
+      <Link href="/submit-quiz">
+        <button>Submit a Quiz Question</button>
+      </Link>
       <h1>Basketball Quiz</h1>
       {quiz ? (
         quiz.questions.map((question) => (
@@ -67,7 +71,7 @@ const TakeQuiz = () => {
                       name={`question-${question.id}`}
                       value={option}
                       checked={userAnswers[question.id] === option}
-                      onChange={() => handleAnswerSubmission(question.id, option)}
+                      onChange={() => handleUserAnswer(question.id, option)}
                     />
                     {option}
                   </label>
@@ -77,7 +81,7 @@ const TakeQuiz = () => {
           </div>
         ))
       ) : (
-        <p>Loading quiz data...</p>
+        <p>Loading quiz...</p>
       )}
 
       <button onClick={handleSubmitAnswers}>Submit Answers</button>
